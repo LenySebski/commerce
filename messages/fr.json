@@ -1,0 +1,69 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "search": "Rechercher",
+    "menu": "Menu"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "products": "Produits",
+    "collections": "Collections",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "search": {
+    "placeholder": "Rechercher des produits...",
+    "noResults": "Aucun résultat trouvé",
+    "resultsCount": "{count} résultats trouvés"
+  },
+  "cart": {
+    "title": "Mon Panier",
+    "empty": "Votre panier est vide.",
+    "addToCart": "Ajouter au Panier",
+    "proceedToCheckout": "Procéder au Paiement",
+    "outOfStock": "Épuisé",
+    "selectOption": "Veuillez sélectionner une option",
+    "openCart": "Ouvrir le panier",
+    "closeCart": "Fermer le panier",
+    "taxes": "Taxes",
+    "shipping": "Livraison",
+    "shippingCalculated": "Calculé lors du paiement",
+    "total": "Total",
+    "quantity": "Quantité"
+  },
+  "product": {
+    "price": "Prix",
+    "description": "Description",
+    "options": "Options",
+    "variants": "Variantes",
+    "availability": "Disponibilité",
+    "inStock": "En Stock",
+    "outOfStock": "Épuisé",
+    "relatedProducts": "Produits Associés"
+  },
+  "sorting": {
+    "relevance": "Pertinence",
+    "trending": "Tendance",
+    "latestArrivals": "Dernières arrivées",
+    "priceLowToHigh": "Prix: Croissant",
+    "priceHighToLow": "Prix: Décroissant",
+    "sortBy": "Trier par"
+  },
+  "welcome": {
+    "title": "🛍️ Bienvenue sur Next.js Commerce !",
+    "description": "Ceci est une vitrine haute performance, SSR propulsée par Shopify, Next.js et Vercel.",
+    "deployLink": "Déployez la vôtre"
+  },
+  "footer": {
+    "allRightsReserved": "Tous droits réservés.",
+    "poweredBy": "Propulsé par"
+  },
+  "error": {
+    "pageNotFound": "Page non trouvée",
+    "serverError": "Erreur serveur",
+    "tryAgain": "Réessayer"
+  }
+}

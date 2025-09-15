@@ -1,0 +1,69 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "search": "Search",
+    "menu": "Menu"
+  },
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "collections": "Collections",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "search": {
+    "placeholder": "Search for products...",
+    "noResults": "No results found",
+    "resultsCount": "{count} results found"
+  },
+  "cart": {
+    "title": "My Cart",
+    "empty": "Your cart is empty.",
+    "addToCart": "Add To Cart",
+    "proceedToCheckout": "Proceed to Checkout",
+    "outOfStock": "Out Of Stock",
+    "selectOption": "Please select an option",
+    "openCart": "Open cart",
+    "closeCart": "Close cart",
+    "taxes": "Taxes",
+    "shipping": "Shipping",
+    "shippingCalculated": "Calculated at checkout",
+    "total": "Total",
+    "quantity": "Quantity"
+  },
+  "product": {
+    "price": "Price",
+    "description": "Description",
+    "options": "Options",
+    "variants": "Variants",
+    "availability": "Availability",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "relatedProducts": "Related Products"
+  },
+  "sorting": {
+    "relevance": "Relevance",
+    "trending": "Trending",
+    "latestArrivals": "Latest arrivals",
+    "priceLowToHigh": "Price: Low to high",
+    "priceHighToLow": "Price: High to low",
+    "sortBy": "Sort by"
+  },
+  "welcome": {
+    "title": "🛍️ Welcome to Next.js Commerce!",
+    "description": "This is a high-performance, SSR storefront powered by Shopify, Next.js, and Vercel.",
+    "deployLink": "Deploy your own"
+  },
+  "footer": {
+    "allRightsReserved": "All rights reserved.",
+    "poweredBy": "Powered by"
+  },
+  "error": {
+    "pageNotFound": "Page not found",
+    "serverError": "Server error",
+    "tryAgain": "Try again"
+  }
+}
