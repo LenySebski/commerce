@@ -3,10 +3,10 @@ import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
   // A list of all locales that are supported
-  locales: ["en", "es", "fr", "de", "ja"],
+  locales: ["en-gb", "en-us", "en-fr", "fr-fr", "fr-gb", "fr-us"],
 
   // Used when no locale matches
-  defaultLocale: "en",
+  defaultLocale: "en-gb",
 
   // The `pathnames` object holds pairs of internal and
   // external paths. Based on the locale, the external
@@ -16,12 +16,15 @@ export const routing = defineRouting({
     // external path can be provided for all locales
     "/": "/",
     "/search": "/search",
+    "/products": "/products",
+    "/shop": "/shop",
     "/product/[handle]": {
-      en: "/product/[handle]",
-      es: "/producto/[handle]",
-      fr: "/produit/[handle]",
-      de: "/produkt/[handle]",
-      ja: "/商品/[handle]",
+      "en-gb": "/product/[handle]",
+      "en-us": "/product/[handle]",
+      "en-fr": "/product/[handle]",
+      "fr-fr": "/produit/[handle]",
+      "fr-gb": "/produit/[handle]",
+      "fr-us": "/produit/[handle]",
     },
   },
 });

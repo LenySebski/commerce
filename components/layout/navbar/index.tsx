@@ -1,6 +1,7 @@
 import CartModal from "components/cart/modal";
 import LanguageSwitcher from "components/language-switcher";
 import LogoSquare from "components/logo-square";
+import RegionSwitcher from "components/region-switcher";
 import { getMenu } from "lib/shopify";
 import { Menu } from "lib/shopify/types";
 import Link from "next/link";
@@ -32,21 +33,39 @@ export async function Navbar() {
               {SITE_NAME}
             </div>
           </Link>
-          {menu.length ? (
-            <ul className="hidden gap-6 text-sm md:flex md:items-center">
-              {menu.map((item: Menu) => (
-                <li key={item.title}>
-                  <Link
-                    href={item.path}
-                    prefetch={true}
-                    className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          ) : null}
+          <ul className="hidden gap-6 text-sm md:flex md:items-center">
+            <li>
+              <Link
+                href="/shop"
+                prefetch={true}
+                className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
+              >
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/products"
+                prefetch={true}
+                className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
+              >
+                Products
+              </Link>
+            </li>
+            {menu.length
+              ? menu.map((item: Menu) => (
+                  <li key={item.title}>
+                    <Link
+                      href={item.path}
+                      prefetch={true}
+                      className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))
+              : null}
+          </ul>
         </div>
         <div className="hidden justify-center md:flex md:w-1/3">
           <Suspense fallback={<SearchSkeleton />}>
@@ -55,6 +74,7 @@ export async function Navbar() {
         </div>
         <div className="flex items-center justify-end gap-4 md:w-1/3">
           <LanguageSwitcher />
+          <RegionSwitcher />
           <CartModal />
         </div>
       </div>

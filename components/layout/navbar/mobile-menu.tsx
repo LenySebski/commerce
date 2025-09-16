@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { Dialog, Transition } from '@headlessui/react';
-import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { Fragment, Suspense, useEffect, useState } from 'react';
+import { Dialog, Transition } from "@headlessui/react";
+import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
+import { Fragment, Suspense, useEffect, useState } from "react";
 
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Menu } from 'lib/shopify/types';
-import Search, { SearchSkeleton } from './search';
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Menu } from "lib/shopify/types";
+import Search, { SearchSkeleton } from "./search";
 
 export default function MobileMenu({ menu }: { menu: Menu[] }) {
   const pathname = usePathname();
@@ -22,8 +22,8 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
         setIsOpen(false);
       }
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [isOpen]);
 
   useEffect(() => {
@@ -76,20 +76,42 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
                     <Search />
                   </Suspense>
                 </div>
-                {menu.length ? (
-                  <ul className="flex w-full flex-col">
-                    {menu.map((item: Menu) => (
-                      <li
-                        className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
-                        key={item.title}
-                      >
-                        <Link href={item.path} prefetch={true} onClick={closeMobileMenu}>
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
+                <ul className="flex w-full flex-col">
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link
+                      href="/shop"
+                      prefetch={true}
+                      onClick={closeMobileMenu}
+                    >
+                      Shop
+                    </Link>
+                  </li>
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link
+                      href="/products"
+                      prefetch={true}
+                      onClick={closeMobileMenu}
+                    >
+                      Products
+                    </Link>
+                  </li>
+                  {menu.length
+                    ? menu.map((item: Menu) => (
+                        <li
+                          className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
+                          key={item.title}
+                        >
+                          <Link
+                            href={item.path}
+                            prefetch={true}
+                            onClick={closeMobileMenu}
+                          >
+                            {item.title}
+                          </Link>
+                        </li>
+                      ))
+                    : null}
+                </ul>
               </div>
             </Dialog.Panel>
           </Transition.Child>
